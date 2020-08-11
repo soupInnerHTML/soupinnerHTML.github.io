@@ -1,0 +1,198 @@
+@media (max-width: 1400px) {
+	.merkury-blue .d-flex {
+		flex-direction: column-reverse;
+	}
+	.tasks {
+	    width: 100%;
+	    margin: 20px 0 0 -40px;
+	}
+	.drag-drop h1 {
+	    margin-top: 50px;
+	}
+	.template-desc-1, .template-desc-2{
+		left: 0;
+	}
+	.template-desc-1 img,  .template-desc-2 img{
+		width: 70%;
+	}
+	footer .description {
+		text-align: center;
+		width: 100%;
+	}
+	footer nav {
+		margin: auto;
+	}
+	footer .d-flex.flex-wrap {
+		flex-direction: column;
+	}
+	.contact {
+		margin: 0 !important;
+	}
+	.socials {
+		justify-content: flex-end;
+		/*margin-top: 20px;*/
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.merkury-middle {
+	    margin: 50px 0 0 50px; 
+	}
+	.template-desc-1{
+		zoom: 0.6;
+		top: -915px;
+		left: -260px;
+	}
+	.template-desc-2{
+		zoom: 0.6;
+		top: -768px;
+		left: 161px;
+	}
+	.tips {
+		width: 100%;
+	}
+	.devices {
+		left: -8%;
+		top: 0;
+	    width: 100%;
+	    margin-top: 50px;
+	}
+	.merkury-blue {
+		margin-top: 0;
+	}
+	.price-block {
+		margin-bottom: 50px;
+	}
+	.fin .description {
+		margin: 0;
+	}
+}
+
+
+@media (max-width: 992px) {
+	header .menu {
+		display: flex;
+	    flex-direction: column;
+	    position: fixed;
+	    width: 100%;
+	    background: rgba(14,26,53, .9);
+	    /* height: 1000px; */
+	    top: 0;
+	    right: 0;
+	    padding: 40% 0 100% 0;
+	    z-index: 20;
+	}
+	header .menu {
+		font-size: 30px;
+	}
+	.card-Merkury {
+		width: 50%;
+		margin-bottom: 50px;
+	}
+	.Graph { 
+		height: 40%;
+	}
+	.fin .description {
+		white-space: initial;
+	}
+	.socials {
+		justify-content: center;
+		margin-top: 20px;
+		zoom: 2;
+	}
+	footer nav, footer .description {
+		font-size: 20px;
+	}
+	.google {
+		padding: 0 !important;
+	}
+	.logo {
+		zoom: 0.5;
+	}
+	.template-desc-1{
+		top: -715px;
+		left: -260px;
+	}
+	.template-desc-2{
+		top: -668px;
+		left: 161px;
+	}
+}
+
+@media (max-width: 768px) {
+	.template-desc-1{
+		zoom: .3;
+		top: -1115px;
+		left: -260px;
+	}
+	.template-desc-2{
+		zoom: .3;
+		top: -1068px;
+		left: 161px;
+	}
+	.Graph { 
+		height: 30%;
+	}
+	.card-Merkury {
+		width: 100%;
+		margin-bottom: 100px;
+	}
+	.merkury-middle {
+	    margin: 0;
+	}
+	.devices {
+		left: -2%;
+	}
+	.merkury-middle .description, .merkury-middle h1, .blue-block {
+		width: 90%;
+		text-align: center;
+	}
+	 h1 {
+		font-size: 49px !important;
+	}
+	footer {
+	    padding: 65px 0 65px 0;
+	}
+	.cards-holder {
+	    width: 100%;
+	}
+	.merkury-template {
+	    padding-top: 50px;
+	}
+}
+
+@media (max-width: 576px) {
+	.template-desc-1{
+		top: -815px;
+		left: -260px;
+	}
+	.template-desc-2{
+		top: -768px;
+		left: 161px;
+	}
+	.Graph { 
+		height: 20%;
+	}
+	.login {
+    	width: 90px;
+	}
+	.front-img {
+	    width: 100%;
+	}
+	.price-block {
+		padding: 32px;
+	}
+	.fin {
+	    margin-top: -104px;
+	}
+}
+@media (max-width: 500px) {
+	.template-desc-1, .template-desc-2{
+		display: none;
+	}
+	.fin {
+	    margin-top: 0;
+	    padding-top: 150px;
+	}
+}

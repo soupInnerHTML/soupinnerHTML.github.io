@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body, html {
+    overflow-x: hidden; 
+}
+button {
+	outline: none !important;
+}
+.merkury-front {
+  object-fit: contain;
+  background-color: #0e1a35;
+}
+.container{
+	max-width: 1715px;
+}
+header {
+	z-index: 10;
+}
+.menu {
+	width: auto;
+	z-index: 10;
+}
+.menu a {
+	text-align: right;
+	color: #Fff;
+	text-decoration: none;
+	margin-right: 49px;
+	letter-spacing: 1px;
+	transition: color .3s ease;
+}
+.menu a:hover {
+	color: #5584ff;
+}
+.login{
+	z-index: 10;
+	width: 130px;
+	height: 41px;
+	object-fit: contain;
+	border-radius: 24px;
+	border: solid 1px rgba(85, 132, 255, 0.3);
+	color: #5584ff;
+	background-color: transparent;
+	transition: .3s ease;
+}
+.login:hover {
+	color: #000;
+	background: #fff;
+}
+.Get-started-button {
+	letter-spacing: 0.36px;
+	z-index: 10;
+	font-weight: bold;
+ 	width: 204px;
+	height: 48px;
+	object-fit: contain;
+	border-radius: 24px;
+	background-color: #5584ff;
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+	margin-top: 57px;
+}
+.Grow-Your-business-with-Merkury {
+	margin-top: 128px;
+	font-size: 60px;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+}
+.Your-partner-in-crime {
+	object-fit: contain;
+	font-size: 36px;
+	color: #8492af;
+	margin-top: -6px;
+}
+.front-img{
+	position: relative;
+	bottom: -92px;
+}
+.Grid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 110%;
+	z-index: 1;
+}
+.Graph {
+	position: absolute;
+	top: 14%;
+	left: 0;
+	width: 100%;
+	height: 60%;
+	z-index: 1;
+}
+.merkury-secondary {
+	margin-top: 224px;
+}
+.merkury-secondary b {
+	font-size: 24px;
+  margin-top: 40px;
+  display: block;
+}
+.card-Merkury {
+	width: 30%;
+}
+.card-Merkury img {
+	height: 90px;
+}
+.card-Merkury p {
+	display: block;
+	padding-top: 20px;
+	font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.36px;
+  color: #8492af;
+  width: 70%;
+  margin: auto;
+}
+.card-Merkury button {
+margin-top: 44px;
+  width: 250px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 24px;
+  border: solid 1px rgba(132, 146, 175, 0.3);
+	transition: .3s ease;
+  background: #fff;
+  font-weight: bold;
+}
+
+.card-Merkury button:hover {
+	  background-color: #5584ff;
+	  color: #fff;
+}
+.merkury-middle {
+	margin-top: 290px;
+	margin-left: 100px;
+}
+.tips {
+	width: 50%;
+	margin-left: 3.2%;
+}
+.head-sect {
+	font-size: 60px;
+  font-weight: 100;
+  color: #0e1a35;
+}
+.description {
+	margin-top: 40px;
+	width: 70%;
+	font-size: 18px;
+  line-height: 1.67;
+  color: #8492af;
+}
+.devices {
+	position: relative;
+	right: -82%;
+	top: -480px;
+}
+.blue-block {
+	margin-top: 40px;
+}
+.blue-block img {
+	vertical-align: top;
+}
+.blue-block span {
+	font-size: 22px;
+	font-style: normal;
+	line-height: 1.36;
+	letter-spacing: normal;
+	text-align: left;
+	color: #5584ff;
+	margin-left: 12px;
+}
+.merkury-blue {
+	background: url(img/bg-ned-to.png) no-repeat center center;
+	background-size: cover;
+	margin-top: -400px;
+	padding-bottom: 90px;
+}
+.drag-drop h1 {
+	font-size: 60px;
+  font-weight: 100;
+  margin-top: 215px;
+}
+.drag-drop a {
+	text-decoration: none;
+	margin-right: 10px;
+}
+.drag-drop p {
+	margin: 35px 0 0 4px;
+	line-height: 1.67;
+	font-size: 18px;
+	color: #8492af;
+}
+.arrows {
+	margin: 45px 0 0 4px;
+}
+.tasks {
+	width: 80%;
+	margin-right: 90px;
+	margin-top: 100px;
+}
+.merkury-template {
+	padding-top: 200px;
+	background: #f6f7fa;
+}
+.layout {
+	margin-top: 60px;
+}
+.template-desc-1{
+	position: relative;
+	top: -615px;
+	left: -360px;
+}
+.merkury-template .description{
+	/*white-space: pre;*/
+}
+.fin  .description {
+	white-space: pre;
+	margin-top: 110px;
+}
+.template-desc-2{
+	position: relative;
+	top: -468px;
+	left: 361px;
+}
+.fin {
+	margin-top: -204px;
+	background: #f6f7fa;
+}
+.prices {
+	margin-top: 100px;
+}
+.price-block {
+	background: #fff;
+	padding: 32px 64px 20px 64px;
+	/*margin: 0 60px 0 50px;*/
+}
+.price-block h4{
+	font-weight: normal;
+	letter-spacing: 0.48px;
+	color: #0e1a35;
+}
+.dollar  {
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 3.64;
+	letter-spacing: 0.8px;
+	color: #0e1a35;
+}
+.price  {
+	font-size: 72px;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 0.5;
+	letter-spacing: 1.44px;
+	text-align: left;
+	color: #0e1a35;
+}
+.per {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #8492af;
+}
+.cards-holder {
+	width: 88%;
+	margin: auto;
+}
+.option {
+	margin-bottom: 10px;
+}
+.option img {
+	margin-right: 14px;
+}
+.join-now {
+	letter-spacing: 0.36px;
+	font-weight: bold;
+ 	width: 204px;
+	height: 48px;
+	object-fit: contain;
+	border-radius: 24px;
+	background-color: #5584ff;
+	border: 0;
+	color: #fff;
+	font-size: 18px;
+	margin: 17px 0 100px 0;
+}
+.join-block hr {
+	display: inline;
+	height: 1px;
+}
+footer {
+	background: #121A34;
+	padding: 65px 180px 65px 204px;
+}
+footer a {
+	color: #8492af !important;
+}
+.socials img {
+	height: 16px;
+	padding-right: 20px;
+}
+.navbar-close {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
