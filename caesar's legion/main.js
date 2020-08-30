@@ -109,6 +109,8 @@ $(document).ready(function() {
 
 	$('.plus, .btn.btn-link').click(function() {
 
+		$('.plus').html('+')
+
   		let tgl = $(this).hasClass('plus') ? $(this) : $(this).parent().find($('.plus'))
 
   		if( !tgl.parent().parent().parent().find( $('.collapse') ).hasClass('show') ) {
@@ -122,10 +124,14 @@ $(document).ready(function() {
 
 
 	let x = $('svg line')
-    $('.close').hover(function() {
+    $('.close, .fancybox-close-small').hover(function() {
     	x.attr({'stroke': '#7C0105', 'stroke-opacity': '1'})
     }, function() {
     	x.attr({'stroke': 'black', 'stroke-opacity': '.5'})
+    })
+
+    $('.fancybox-button').click(function() {
+    	console.log('1')
     })
 
     $('nav a').click(function() {
