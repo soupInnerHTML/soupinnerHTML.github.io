@@ -29,4 +29,10 @@
 	.reviews .d-flex{
 	    flex-wrap: wrap;
 	}
+	.fancybox-button--arrow_left {
+		left: 15% !important;
+    	}
+    	.fancybox-button--arrow_right {
+	    	right: 15% !important;
+	}
 }
