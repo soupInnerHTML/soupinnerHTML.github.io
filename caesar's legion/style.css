@@ -1,0 +1,422 @@
+section > div, footer > div, .container, nav {
+	max-width: 1440px;
+	margin: auto;
+}
+body, html, .modal, header  {
+	overflow-x: hidden !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+header {
+	background-color: rgba(203, 104, 37, 0.78);
+}
+header nav{
+	display: flex;
+	justify-content: space-between;
+	padding: 26px 20px 26px 30px;
+}
+header .links {
+	margin: 0 0 0 70px;
+	width: 56.3%;
+	display: flex;
+	justify-content: space-between;
+}
+header .links a {
+	color: #000000;
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 48px;
+	text-decoration: none;
+}
+.btn-join {
+	background: #faf5ca;
+	font-family: "Yanone Kaffeesatz";
+	font-size: 24px;
+	font-weight: 700;
+	border: 0;
+	padding: 0 21px;
+	outline: 0 !important;
+	transition: .3s;
+	border: 3px solid transparent;
+}
+.btn-join:hover  {
+	cursor: pointer;
+	background-color: #eae4b1;
+}
+.btn-join:focus{
+	border: 3px solid #faf5ca;
+	color: #faf5ca;
+	background: #7C0105;
+}
+footer .btn-join {
+	font-size: 36px;
+	padding: 3px 39px;
+}
+.welcome-block {
+	background: url(img/Lovely_Fallout_New_Vegas_Skyline_1.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	text-align: center;
+	color: #faf5ca;
+	font-family: "Yanone Kaffeesatz";
+	padding: 53vh 30% 97px;
+}
+.welcome-block h1 {
+	font-size: 96px;
+	font-weight: 700;
+	letter-spacing: 2.88px;
+}
+.welcome-block h3 {
+	margin-top: 20px;
+	font-size: 36px;
+	font-weight: 700;
+}
+.about-us__heading {
+	text-align: center;
+	padding: 40px 0;
+}
+.about-us {
+	background-color: #400707;
+	padding: 70px 53px 70px 68px;
+	font-family: "Yanone Kaffeesatz";
+}
+h2 {
+	font-size: 64px;
+	font-weight: 700;
+	font-family: "Yanone Kaffeesatz";
+}
+h4 {
+	font-size: 36px;
+	font-weight: 700;
+	font-family: "Yanone Kaffeesatz";
+}
+.about-us__wrapper-block {
+	padding: 47px 70px 5px 70px;
+	background-color: #faf5ca;
+}
+.about-us__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: stretch;
+	grid-column-gap: 10px;
+  	grid-row-gap: 15px;
+  	margin: 45px 75px 0 25px;
+}
+.about-us__grid img {
+	object-fit: cover;
+}
+.about-us__origin {
+	margin: 27px 0 0 10px;
+}
+.about-us__map img {
+	padding: 10px 0 52px 22px;
+	mix-blend-mode: multiply;
+}
+.about-us__origin p {
+	margin-top: 30px;
+	font-family: Raleway;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+	width: 69%;
+}
+.caesar-img {
+	margin: 0 23px 58px 0;
+}
+.about-us__wrapper-block-w-grid {
+	background-color: #eae4b1;
+	padding: 70px;
+}
+.numbers{
+	color: #faf5ca;
+	font-family: Raleway;
+	text-align: center;
+	padding: 63px 100px 65px;
+}
+.numbers__big-num {
+	font-size: 96px;
+	font-weight: 800;
+}
+.numbers p {
+	width: 52%;
+	margin: auto;
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 39.2px;
+}
+.body{
+	background-color: #7c0105;
+}
+.promo {
+	background: url(img/IMG_0441_1.svg) no-repeat;
+	background-size: 100% auto;
+	text-align: center;
+	color: #000;
+	font-family: "Yanone Kaffeesatz";
+	padding: 113px 100px 225px;
+}
+.promo__pluses {
+	padding: 111px 0 0 0;
+}
+.promo__plus h4 {
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+.promo__plus p {
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: 500;
+	width: 75%;
+	margin: auto;
+	text-align: left;
+}
+.review {
+	background: url(img/IMG_0442_1.svg) 30% 0 no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	color: #000;
+	padding: 89px 0 93px 0;
+	margin-top: -40px;
+	min-width: 500px;
+}
+.review-diff {
+	background: initial;
+	color: inherit;
+	min-width: 340px;
+}
+.reviews {
+	padding: 0px 70px;
+	color: #faf5ca;
+	font-family: "Yanone Kaffeesatz";
+}
+.review h6 {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 36px;
+}
+.review img {
+	margin-bottom: 20px;
+}
+.review p {
+	font-family: Raleway;
+	font-size: 18px;
+	font-weight: 400;
+	width: 70%;
+	margin: auto;
+	margin-top: 16px;
+}
+.review-diff p {
+	width: 100%;
+}
+.faq{
+	background-color: #faf5ca;
+	padding: 20px 0 62px;
+}
+.faq-wrapper {
+	background-color: #400707;
+	padding: 38px 36px;
+}
+.faq a{
+	white-space: normal;
+	color: #000;
+	text-decoration: none;
+	font-family: Raleway;
+	font-weight: 600;
+	font-size: 18px;
+	width: 60% !important;
+}
+.faq a:first-of-type {
+    text-align: left !important;
+}
+.faq a:hover {
+	color: #000;
+	text-decoration: none;
+}
+.faq__tab{
+	padding: 0 22.1% 0 28%;
+	text-align: left;
+	min-height: 72px;
+}
+.card-body {
+	text-align: left;
+	padding: 34px 24.1% 50px 28.9%;
+	font-family: Raleway;
+		font-size: 18px;
+}
+.faq__tab .plus {
+	font-family: "IBM Plex Sans";
+	font-size: 24px;
+	font-weight: 600;
+    text-align: end;
+    width: 30% !important;
+}
+.card-header {
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+}
+footer {
+	background-color: #7c0105;
+	padding: 131px 35px;
+	font-family: Raleway;
+}
+.contacts__desc {
+	margin: 0 100px 0 37px;
+}
+.contacts__desc *{
+	color: #faf5ca;
+	font-size: 24px;
+	line-height: 40px;
+}
+footer h6 {
+	font-weight: 600;
+	margin-top: 13px;
+}
+.contacts__desc p {
+	font-weight: 400;
+}
+.upper{
+	margin: 67px 0 54px 0;
+}
+.upper a{
+	border-bottom: 1px solid #faf5ca;
+	color: #faf5ca;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 40px;
+}
+footer hr{
+	background-color: #cb6825;
+	height: 1px;
+	margin-bottom: 54px;
+}
+.join-block {
+	margin-top: 9px;
+}
+.join-block p{
+	color: rgba(250, 245, 202, 0.6);
+	font-size: 24px;
+	line-height: 40px;
+	margin-top: 80px;	
+}
+.social-media a{
+	margin-right: 80px;
+}
+.manager {
+	margin: 20px 0 0 43px;
+	object-fit: contain;
+}
+.fancybox-button--arrow_left {
+	left: 20% !important;
+	background: transparent !important;
+}
+.fancybox-button--arrow_right {
+	right: 20% !important;
+	background: transparent !important;
+}
+.fancybox-button--arrow_right[disabled] {
+	opacity: .2 !important;
+}
+
+.modal {
+	/*display: inline-flex !important;
+	align-items: center;*/
+}
+.modal-dialog {
+	max-width: 665px;
+	font-family: Yanone Kaffeesatz;
+	flex-grow: 2;
+}
+.modal-content {
+	background: url('img/IMG_0442 1.png') no-repeat right top #FAF5CA;
+	border-radius: 0;
+}
+.modal-header {
+	border: 0;
+	padding-bottom: 0;
+}
+.modal-title {
+	padding: 21px 15% 0;
+	text-align: center;
+	font-size: 30px;
+}
+.modal-input {
+	display: block;
+	margin: 0 auto 9px;
+	font-family: Raleway;
+	font-size: 12px;
+	color: rgba(0, 0, 0, .5);
+	padding: 0 0 0 7px;
+	background: #FAF5CA;
+	border: 1px solid #000000;
+	height: 42px;
+	width: 50%;
+}
+.modal-body {
+	padding-top: 8px;
+}
+.modal-body .btn-join {
+	background: #7C0105;
+	color: #FAF5CA;
+	height: 46px;
+	margin: 13px 0 34px 0;
+	transition: .3s;
+}
+.modal svg line {
+	transition: .3s;
+}
+.modal-body .btn-join:hover {
+	background: #400707;
+}
+.modal-body .btn-join:focus {
+	border: 3px solid transparent;
+}
+.close {
+	position: absolute;
+	top: 13px;
+	right: 15px;
+	outline: 0 !important;
+}
+.modal-success {
+	font-size: 36px;
+	text-align: center;
+	padding: 30% 20%;
+}
+.wrapper-modal-input:after {
+	content: url('img/Group 325.svg');
+	position: absolute;
+}
+.check-from {
+	position: relative;
+	top: 2em;
+	right: -8.7em;
+}
+.warning {
+	color: #7C0105;
+	font-size: 14px;
+}
+#exampleModal2 .close {
+	position: relative;
+}
+.fancybox-content {
+	background: #F2EDC3 !important;
+}
+.fancybox-image[src="img/Group 330.jpg"] {
+	mix-blend-mode: multiply;
+	border: 0;
+}
+.fancybox-close-small {
+	background: none !important;
+	right: 8px;
+	top: 8px;
+}
+.fancybox-image {
+	border: 55px solid #F2EDC3;
+}
+.fancybox-close-small-image {
+	background: #EAE4B1 !important;
+	right: 0;
+	top: 0;
+}

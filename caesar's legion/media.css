@@ -1,0 +1,32 @@
+@media screen and (min-width: 1536px) {
+	.promo {
+		padding-bottom: 325px;
+	}
+	.welcome-block {
+		padding-top: 60vh;
+	}
+}
+@media screen and (min-width: 1920px) {
+	.promo {
+		background-position: center;
+		padding: 223px 100px 355px;
+	}
+}
+@media screen and (max-width: 1366px) {
+	.reviews {
+	    padding: 0;
+	}
+	.review {
+		-webkit-background-size: contain;
+		background-size: contain;
+		background-position: center 0;
+	}
+}
+@media screen and (max-width: 1280px) {
+	.promo__pluses {
+	    padding: 51px 0 0 0;
+	}
+	.reviews .d-flex{
+	    flex-wrap: wrap;
+	}
+}
