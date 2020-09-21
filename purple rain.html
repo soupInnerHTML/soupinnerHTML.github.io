@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			background: linear-gradient(rgb(230, 230, 250) 100%, rgb(213, 213, 232));
+			height: 100vh;
+			overflow: hidden;
+		}
+		.drop {
+			background: rgb(138, 43, 226);
+			width: 3px;
+			height: 20px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	<script>
+		let speed = 20,
+
+		indent = 10,
+
+		rainLimit = window.innerHeight,
+
+		colors = ['rgb(230, 230, 250)', 'rgba(230, 225, 250)', 'rgba(230, 220, 250)']
+
+		randomX = (max, min = 0) => {
+			let rand = min - 0.5 + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+
+		class Rain {
+    		drop = '<div class="drop"></div>';
+
+			createDrop(x = randomX(window.innerWidth)) {
+				$('body').prepend(this.drop)
+				let drop = $('.drop').eq(0)
+
+				drop.css('left', x)
+			}
+
+			droping(x, eq) {
+				// indent = indent + randomX(5, 20)
+				indent += 15
+				$('.drop').eq(eq).css('top', x)
+			}
+		}
+
+		setInterval(() => {
+			indent = 0
+			let neonRain = new Rain()
+			neonRain.createDrop()
+
+			for(let i = 0; i < $('.drop').length; i++) {
+				neonRain.droping(indent, i)
+				let drop = $('.drop').eq(i)
+				if(parseInt(drop.css('top')) > rainLimit) drop.remove()
+			}
+
+		}, speed)
+
+	</script>
+</body>
+</html>
