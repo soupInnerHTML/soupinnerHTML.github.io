@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 100vh;
+			overflow: hidden;
+			background: #000;
+			/*display: flex;*/
+		}
+		canvas {
+
+		}
+		.one-zero {
+			color: green;
+			position: absolute;
+			font-size: 20px;
+			font-family: 'Source Code Pro', monospace;
+		}
+		@keyframes appearing {
+		 from { opacity: 0; }
+		 to { opacity: 1; }
+		}
+	</style>
+</head>
+<body>
+	<!-- <canvas></canvas> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	<script>
+		var limit = 300, indent = 50, speed = 30, moveLimit = window.innerHeight, str = ''
+
+		randomX = (max = 1, min = 0) => {
+			let rand = min - 0.5 + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		},
+
+		oneZeroGenerator = () => {
+			str = ''
+			sym = '牡 マ キ グ ナ ル フ ァ 系 路 克 瑞 大 阪 市 立 学 鎰 命 科 ャ マ 能 力 ϒ 人 は 妻 ス テ ィ 要 望 通 り 玉 宏 ¥ サ 丹 谷 Ѫ 灯 影 伝 鶐'.split` `
+			for(let i = 0; i < randomX(2, 6); i++){
+				str += sym[randomX(sym.length - 1)] + "<br>"
+			}
+		},
+		
+		lineGenerator = index => {
+
+			let separator,
+
+			starts = [...Array(window.innerWidth).keys()].filter(start => !(start % separator) )
+
+			// console.log(starts)
+
+			start = starts[index]
+
+			return start
+
+			starts.filter(deffStart => deffStart !== start)
+
+			if (starts.length < 20) starts = [...Array(window.innerWidth).keys()].filter(start => !(start % separator) )
+		}
+
+
+
+		class MatrixString {
+			temp = lineGenerator(1)
+  		  		oneZero = '<p class="one-zero">' + str + '</p>';
+			createRow(x = randomX(window.innerWidth)) {
+				oneZeroGenerator()
+				$('body').prepend(this.oneZero)
+				let oneZero = $('.one-zero').eq(0)
+
+				oneZero.css('left', lineGenerator(x))
+			}
+
+			moving(x, eq) {
+				indent += 15
+				$('.one-zero').eq(eq).css({
+					'top': x, 
+					'animation': 'appearing 1s', 
+					'transition' : 'opacity 1s', 
+					'font-size' : randomX(14, 30) + 'px'})
+			}
+
+			
+		}
+
+		setInterval(() => {
+			indent = 0
+			let binMatrix = new MatrixString()
+			binMatrix.createRow()
+
+			for(let i = 0; i < $('.one-zero').length; i++) {
+				binMatrix.moving(indent, i)
+				let oneZero = $('.one-zero').eq(i)
+				if(parseInt(oneZero.css('top')) > moveLimit) oneZero.remove()
+			}
+
+		}, speed)
+	</script>
+
+	<script>
+
+		// let canvas = $('canvas')[0],
+		// ctx = canvas.getContext("2d"),
+		// y = 100
+
+		// canvas.width = window.innerWidth;
+		// canvas.height = window.innerHeight;
+
+		// let xs = [...new Array(canvas.width).keys()].filter(x => x >= 10 && !(x % 15) && x <= (canvas.width - 15) ),
+		// 	ys = [...new Array(canvas.height).keys()].filter(y => y >= 10 && !(y % 30) && y <= (canvas.height - 40) )
+
+		// console.log(ys, ys[29])
+
+
+		// ctx.fillStyle = "green";
+		// ctx.font = "30px Source Code Pro";
+
+
+		// setInterval(() => {
+		// 	ctx.clearRect(0,0,canvas.width,canvas.height);
+		// 	// y++
+		// 	let randBin = Math.round(Math.random())
+		// 	// x = Math.round(Math.random() * canvas.width)
+		// 	ctx.beginPath();
+		// 	// ctx.fillText(randBin, 10 ,y)
+		// 	// ctx.fillText(randBin, 45 ,y)
+		// 	xs.forEach(x => ctx.fillText(Math.round(Math.random()) , x ,ys[Math.round(Math.random() * ys.length)]));
+		// }, 100)
+	</script>
+</body>
+</html>
