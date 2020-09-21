@@ -14,6 +14,7 @@
 			overflow: hidden;
 			background: #000;
 			/*display: flex;*/
+			zoom: 4;
 		}
 		canvas {
 
@@ -21,7 +22,7 @@
 		.one-zero {
 			color: green;
 			position: absolute;
-			font-size: 20px;
+			/*font-size: 20px;*/
 			font-family: 'Source Code Pro', monospace;
 		}
 		@keyframes appearing {
@@ -73,13 +74,15 @@
 
 		class MatrixString {
 			temp = lineGenerator(1)
-  		  		oneZero = '<p class="one-zero">' + str + '</p>';
+  		  	oneZero = '<p class="one-zero">' + str + '</p>';
+  		  	sizing =  randomX(14, 50)
+
 			createRow(x = randomX(window.innerWidth)) {
 				oneZeroGenerator()
 				$('body').prepend(this.oneZero)
 				let oneZero = $('.one-zero').eq(0)
 
-				oneZero.css('left', lineGenerator(x))
+				oneZero.css({'left': lineGenerator(x), 'zoom' : this.sizing + '%'})
 			}
 
 			moving(x, eq) {
@@ -88,7 +91,7 @@
 					'top': x, 
 					'animation': 'appearing 1s', 
 					'transition' : 'opacity 1s', 
-					'font-size' : randomX(14, 30) + 'px'})
+					})
 			}
 
 			
