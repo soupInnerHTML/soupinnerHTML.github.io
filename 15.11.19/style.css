@@ -1,0 +1,256 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url(FuturaPT-Medium.ttf);
+}
+
+* {
+  font-family: 'Futura PT';
+  padding: 0;
+  margin: 0;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+button:active {
+  outline: none !important;
+}
+
+div > h1 {
+  color: rgba(27, 52, 92, 0.9);
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin: 60px auto;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.line {
+  height: 2px;
+  background: rgba(27, 52, 92, 0.9);
+  margin-top: 82px;
+}
+
+.page-1 {
+  background: url(img/bg_1.png) no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+}
+
+.container {
+  max-width: 95% !important;
+}
+
+.info-top-box div {
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.info-top-box p {
+  font-size: 16px;
+}
+
+.info-top-box .languages-block img {
+  margin-left: 8px;
+}
+
+.info-top-box .languages-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .nav-link {
+  padding-bottom: 0 !important;
+  color: #fff !important;
+  margin-bottom: 126px;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+nav img {
+  margin-top: -61px;
+}
+
+nav .long {
+  margin-right: 40px;
+}
+
+.main-cards-line-block {
+  max-width: 80% !important;
+  margin: auto;
+}
+
+.main-cards-line-block .card-block {
+  -webkit-animation-name: fadeInRight !important;
+          animation-name: fadeInRight !important;
+  margin: auto 26px 40px 0;
+  padding: 23px 0 0 57px;
+  height: 165px;
+  border-radius: 30px;
+  opacity: .95;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-cards-line-block p {
+  white-space: pre;
+  color: rgba(27, 52, 92, 0.8);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.main-cards-line-block svg {
+  margin-bottom: 5px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.build-cards-block .build-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(img/8.png) no-repeat;
+  height: 301px;
+  width: 298px;
+  margin-bottom: 30px;
+  padding-left: 27px;
+}
+
+.build-cards-block .inner {
+  margin: auto 0 19px 0;
+}
+
+.build-cards-block button {
+  width: 102px;
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  background: transparent;
+}
+
+.news-block {
+  max-width: 407px !important;
+}
+
+.news-block p, .news-block h4 {
+  color: #323232;
+}
+
+.graph-block img {
+  width: 95%;
+  margin-bottom: 33px;
+}
+
+.graph-block .bottom-block:first-child {
+  max-width: 192px !important;
+}
+
+.tittle-graph {
+  margin: 60px auto;
+}
+
+.page-4 {
+  background: url(img/main_bg_2_1.png) bottom no-repeat;
+}
+
+.page-4 h4 {
+  margin-bottom: 30px;
+}
+
+footer {
+  background: url(img/bg.png);
+  margin-top: 98px;
+  height: 250px;
+}
+
+footer .line {
+  margin-top: 46px;
+  position: absolute;
+  width: 100% !important;
+  right: 0;
+}
+
+footer h3 {
+  z-index: 1;
+  padding-left: 0 !important;
+  margin-top: 30px;
+  font-size: 24px;
+  background: #244674;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer .logo-bottom {
+  padding-right: 0 !important;
+  margin-top: -144px;
+}
+
+footer .info-bottom-box .d-flex img {
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+footer .info-bottom-box {
+  margin-top: 18px;
+}
+
+.short {
+  left: 0;
+  position: absolute;
+}
+
+.bottom-info-block {
+  margin: 73px 0;
+}
+
+.bottom-info-block p {
+  width: 554px;
+}
+/*# sourceMappingURL=style.css.map */
