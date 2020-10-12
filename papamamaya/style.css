@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/._Montserrat-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/._Montserrat-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/._Montserrat-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/._Montserrat-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/._Montserrat-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url(fonts/Montserrat/._MuseoCyrl700.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Museo";
+  src: url(fonts/Montserrat/._MuseoCyrl300.otf);
+  font-weight: 300;
+}
+
+.top-header, .info-wrapper__info,
+.info__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url(img/Rectangle_1_copy_2.png);
+  background-position: center;
+}
+
+header p {
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1178px;
+  margin: auto;
+}
+
+.top-header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-header img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.info__inner a {
+  color: #f6cfa6;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 37.57px;
+  text-decoration: underline;
+}
+
+.info-wrapper__slogan {
+  color: #f6cfa6;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.social-media__facebook::before {
+  content: url(img/facebook.png);
+}
+
+.social-media__insta::before {
+  content: url(img/instagram.png);
+}
+/*# sourceMappingURL=style.css.map */
