@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="fa/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="vh-100 wrapper">
+      <div class="d-flex h-100">
+        <div class="bg-dark col d-flex flex-column justify-content-center">
+          <div class="form-group text-white mx-auto w-50">
+            <textarea
+              placeholder="Например: привет"
+              class="form-control"
+              rows="5"
+              id="encode_input"
+            ></textarea>
+            <button id="encode_btn" class="btn btn-light mt-4">Закодировать</button>
+          </div>
+        </div>
+        <div class="bg-light col d-flex flex-column justify-content-center">
+          <div class="form-group text-white mx-auto w-50">
+            <textarea
+              placeholder="Например: 546141233263"
+              class="form-control bg-dark text-white"
+              rows="5"
+              id="decode_input"
+            ></textarea>
+            <button id="decode_btn" class="btn btn-dark mt-4">Декодировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>
