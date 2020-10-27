@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>81417161</title>
+    <link rel="icon" type="image/svg" href="asterisk-solid.svg">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="vh-100">
+      <div class="d-lg-flex h-100">
+        <div class="bg-dark col d-flex flex-column justify-content-center">
+          <div class="form-group text-white mx-auto col-md-6 col-sm-8 col py-5 p-lg-0 d-flex flex-column justify-content-center">
+            <textarea
+              placeholder="Например: привет"
+              class="form-control"
+              rows="5"
+              id="encode_input"
+              resize="none"
+            ></textarea>
+
+            <div class="col-5 p-0">
+              <button id="encode_btn" class="btn btn-light mt-4">Закодировать</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-light col d-flex flex-column justify-content-center">
+          <div class="form-group text-white mx-auto py-5 py-lg-0 col-md-6 col-sm-8 col d-flex flex-column justify-content-center">
+            <textarea
+              placeholder="Например: 546141233263"
+              class="form-control bg-dark text-white"
+              rows="5"
+              id="decode_input"
+            ></textarea>
+
+            <div class="col-5 p-0">
+              <button id="decode_btn" class="btn btn-dark mt-4">Декодировать</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="main.js"></script>
+
+    <script>
+      window.location.href == "https://soupinnerhtml.github.io/telephone-cipher/" || document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    
+  </body>
+</html>
