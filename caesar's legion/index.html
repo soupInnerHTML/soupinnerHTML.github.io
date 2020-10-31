@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>caesar's legion</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,900;1,400&family=Yanone+Kaffeesatz:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="shortcut icon" href="img/Fallout New Vegas - Legion Poster by Its--Beth on DeviantArt 1.svg" type="image/png">
+
+    <link rel="stylesheet" href="mobile-menu.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+
 </head>
 <body>
     <header class="fixed-top">
@@ -20,7 +22,7 @@
     			<img src="img/Fallout New Vegas - Legion Poster by Its--Beth on DeviantArt 1.svg" alt="" class="logo">
     		</a>
 
-    		<div class="links">
+    		<div class="links d-none d-sm-flex">
     			<a href="#about_us">О Легионе </a>
     			<a href="#price">Цены</a>
     			<a href="#reviews">Отзывы</a>
@@ -28,9 +30,44 @@
     			<a href="#contacts">Контакты</a>
     		</div>
 
-    		<button class="btn-join" data-toggle="modal" data-target="#exampleModal">ВСТУПИТЬ</button>
+    		<button class="btn-join" data-toggle="modal" data-target="#modalForm">ВСТУПИТЬ</button>
 
     	</nav>
+
+    	<div class="menu d-sm-none">
+		  <nav class="menu__nav">
+		    <ul class="menu__list r-list">
+	      		<li class="menu__group">
+		        	<a href="#about_us" class="menu__link r-link">О Легионе</a>
+	      		</li>
+
+	      		<li class="menu__group">
+		        	<a href="#price" class="menu__link r-link">Цены</a>
+	      		</li>
+
+	      		<li class="menu__group">
+		        	<a href="#reviews" class="menu__link r-link">Отзывы</a>
+	      		</li>
+
+	      		<li class="menu__group">
+		        	<a href="#faq" class="menu__link r-link">FAQ</a>
+	      		</li>
+
+	      		<li class="menu__group">
+		        	<a href="#contacts" class="menu__link r-link">Контакты</a>
+	      		</li>
+		    </ul>
+		  </nav>
+
+		  <button class="menu__toggle r-button" type="button">
+		    <span class="menu__hamburger m-hamburger">
+		      <span class="m-hamburger__label">
+		        <span class="menu__screen-reader screen-reader">Open menu</span>
+		      </span>
+		    </span>
+		  </button>
+		</div>
+
     </header>
 
     <section class="welcome-block" id="top">
@@ -52,9 +89,11 @@
 				<p>Легион Цезаря был основан в 2247 году сыном бога войны Марса, даровавшим бывшим дикарям из ныне не выделяющегося из Легиона племени Черноногов бессценные знания об оружии, выживании и войне. Склонившись перед могуществом сына Марса, к его племени присоединились вскоре и несколько других. Сын Марса был коронован под титулом Цезаря спустя несколько месяцев после зарождения Легиона. Первым его легатом стал Джошуа Грэм, друг Цезаря, тоже способный к войне и бывший великим полководцем, милостью Марса приведший Легион к ряду славных побед.</p>
 			</div>
 
-			<a data-fancybox="gallery" href="img/IMG_0457_1@2x.svg">
-				<img class="caesar-img" src="img/IMG_0457 1.svg" alt="">
+			<a class="desktop-gallery-item" data-fancybox="gallery" href="img/IMG_0457_1@2x.svg">
+				<img class="caesar-img" src="img/IMG_0457 1.png" alt="">
 			</a>
+
+			<img class="caesar-img d-none mobile-caesar" src="img/IMG_0457 1.png" alt="">
 
 		</div>
 
@@ -62,21 +101,87 @@
 
 			<div class="about-us__grid">
 				<a data-fancybox="gallery" href="img/_-2_1@3x.svg">
-					<img src="img/-2 1.svg" alt="">
+					<img src="img/-2 1.png" alt="">
 				</a>
 
 				<a data-fancybox="gallery" href="img/Anderson_Design_Group_1@3x.svg">
-					<img src="img/Anderson Design Group 1.svg" alt="">
+					<img src="img/Anderson Design Group 1.png" alt="anderson">
 				</a>
 				
 				<a data-fancybox="gallery" href="img/Anderson_Design_Group-2_1@3x.svg">
-					<img src="img/Anderson Design Group-2 1.svg" alt="">
+					<img src="img/Anderson Design Group-2 1.png" alt="">
 				</a>
 
 				<a data-fancybox="gallery" href="img/Zion_National_Park_Poster_1@3x.svg">
-					<img src="img/Zion National Park Poster 1.svg" alt="">
+					<img src="img/Zion National Park Poster 1.png" alt="">
 				</a>
 			</div>
+
+			<div class="container d-none mobile-gallery--grid">
+				<div class="row">
+				 	<div class="col">
+				 		<div id="carousel" class="carousel slide" data-interval="false" data-ride="carousel">
+				 			<div class="carousel-inner">
+
+					 			<div class="carousel-item active">
+					 				<img src="img/_-2_1@3x.svg">
+					 			</div>
+
+					 			<div class="carousel-item">
+					 				<img src="img/Anderson_Design_Group_1@3x.svg">
+					 			</div>
+
+					 			<div class="carousel-item">
+					 				<img src="img/Anderson_Design_Group-2_1@3x.svg">
+								 </div>
+
+					 			<div class="carousel-item">
+					 				<img src="img/Zion_National_Park_Poster_1@3x.svg">
+					 			</div>
+
+				 			</div>
+
+					 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+				 				<img src="img/Group 303.svg" alt="">
+				 			</a>
+
+				 			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+				 				<img src="img/Group 304 (1).svg" alt="">
+				 			</a>
+
+				 		</div>
+
+				 		<div class="clearfix">
+					 		<div id="thumbcarousel" class="carousel slide" data-interval="12000" data-ride="carousel">
+					 			<div class="carousel-inner">
+					 				<div class="item active item--grid">
+					 					<div data-target="#carousel" data-slide-to="0" class="thumb d-none">
+					 						<img src="img/-2 1.png">
+					 					</div>
+
+										<div data-target="#carousel" data-slide-to="1" class="thumb">
+										 	<img src="img/Anderson Design Group 1.png">
+										</div>
+
+					 					<div data-target="#carousel" data-slide-to="2" class="thumb">
+					 						<img src="img/Anderson Design Group-2 1.png">
+					 					</div>
+
+					 					<div data-target="#carousel" data-slide-to="3" class="thumb">
+					 						<img src="img/Zion National Park Poster 1.png">
+					 					</div>
+
+					 				</div>
+					 			</div>
+					 		</div>
+				 		</div>
+
+					</div>
+
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+
+
 
 			<div class="about-us__origin">
 				<h4 class="font-weight-normal">Чего Легион достиг?</h4>
@@ -88,7 +193,7 @@
     	
 		<div class="about-us__map about-us__wrapper-block">
 			<a data-fancybox="image" href="img/Group 330.jpg">
-				<img class="w-100" src="img/IMG_0470 2.svg" alt="">
+				<img class="w-100" src="img/IMG_0470 2.png" alt="">
 			</a>
 
 
@@ -98,7 +203,7 @@
 
 	<section class="body">
 		<div class="numbers">
-			<div class="d-flex justify-content-start align-items-start">
+			<div class="d-flex justify-content-md-start justify-content-around align-items-start">
 				<div class="numbers__number">
 					<span class="numbers__big-num">86</span>
 					<p>племен уже вступили в Легион</p>
@@ -133,6 +238,71 @@
 						<p>Отныне вы вовсе освобождены от налогов. По мере своих возможностей служа на благо Легиона, вы не облагаетесь обязательными выплатами и даже получаете поощрительное жалованье.</p>
 					</div>
 				</div>
+
+				<div class="d-none promo__pluses-mobile">
+					<div id="accordionMobile">
+					  <div class="promo__pluses-state">
+					    <div class="card-header" id="headingFour">
+					    	<div class="d-flex justify-content-between align-items-center promo__pluses__tab">
+						        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						          Вы - торговец?
+
+						        </a>
+								
+								<a class="plus btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+									+
+								</a>
+					        </div>
+					    </div>
+
+					    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionMobile">
+					     	<div class="card-body">
+								Вам больше не нужно выплачивать половину прибыли за проход по плохо охраняемым дорогам. Заплатив всего 5 динариев, вы сможете двигаться в путь, не боясь лишиться своего товара или жизни
+							</div>
+					    </div>
+					  </div>
+
+
+					  <div class="promo__pluses-state">
+					    <div class="card-header" id="headingFive">
+					    	<div class="d-flex justify-content-between align-items-center promo__pluses__tab">
+						        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						        	Вы - горожанин?
+						        </a>
+								
+								<a class="plus btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+									+
+								</a>
+					        </div>
+					    </div>
+
+					    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionMobile">
+					      <div class="card-body">
+					      		Теперь нет необходимости защищать свою землю от тех, кто без права на нее претендует. Каждый город выплачивает вычисленный индивидуально налог, получая взамен надежную защиту от внешних угроз.
+					      </div>
+					    </div>
+					  </div>
+
+					  <div class="promo__pluses-state">
+					    <div class="card-header" id="headingSix">
+					      <div class="d-flex justify-content-between align-items-center promo__pluses__tab" style="border: 0">
+						        <a class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+						          Вы - волонтер?
+						        </a>
+								
+								<a class="plus btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+									+
+								</a>
+					        </div>
+					    </div>
+					    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionMobile">
+					      <div class="card-body">
+					       		Отныне вы вовсе освобождены от налогов. По мере своих возможностей служа на благо Легиона, вы не облагаетесь обязательными выплатами и даже получаете поощрительное жалованье.
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
 			</div>
 		</article>
 
@@ -145,23 +315,23 @@
 		<div class="d-flex align-items-start">
 
 			<div class="review">
-				<img src="img/IMG_0453_2_1.svg" alt="">
+				<img src="img/IMG_0453 2 1.png" alt="">
 				<h6>Дейл Бартон,</h6>
-				<h6 style="line-height: .8;">торговец</h6>
+				<h6>торговец</h6>
 				<p>“До того, как Аризона перешла под начало Цезаря, меня, как путешествующего торговца, вечно беспокоили нападавшие рейдеры и мутанты. Было необходимо иметь при себе целый отряд наемников. Теперь о разбойниках мне вообще неприходится думать, а с мутантами помогают справляться легионеры, охраняющие путь!”</p>
 			</div>
 
 			<div class="review review-diff">
-				<img src="img/IMG_0453_4_1.svg" alt="">
+				<img src="img/IMG_0453 4 1.png" alt="">
 				<h6>Аврелий из Феникса,</h6>
-				<h6 style="line-height: .8;">центурион</h6>
+				<h6>центурион</h6>
 				<p>“Великий Цезарь очень ценит преданных людей и щедро вознаграждает воинов, доказаших свою верность и проявивших себя в сражениях. Для меня является огромной честью носить броню центуриона, потому что она служит доказательством той пользы, которую я приношу Легиону; она соразмерна моим заслугам.”</p>
 			</div>
 
 			<div class="review">
-				<img src="img/IMG_0453_5.svg" alt="">
+				<img src="img/IMG_0453 5.png" alt="">
 				<h6>Аркейд Геннон,</h6>
-				<h6 style="line-height: .8;">личный лекарь Цезаря</h6>
+				<h6>личный лекарь Цезаря</h6>
 				<p>“Пусть я, к сожалению, и не воин, но мое положение считается почетным ровно настолько же. Работая на благо Легиона и лично Цезаря, что само по себе большая честь для меня, я уверен, что теперь гораздо более важен, чем когда я занимался бесполезными вещами в обществе Последователей Апокалипсиса.”</p>
 			</div>
 
@@ -253,13 +423,14 @@
 		<div>
 			<div class="d-flex">
 				<img class="manager" src="img/IMG_0480 1.png" alt="">
+
 				<div class="contacts__desc">
 					<h6>Вульпес Инкульта, лучший фрументарий, специалист по связям с общественностью</h6>
 					<p>свяжется с вами, если Легион будет заинтересован в сотрудничестве</p>
 				</div>
 
 				<div class="join-block">
-					<button class="btn-join">СВЯЗАТЬСЯ</button>
+					<button class="btn-join" data-toggle="modal" data-target="#modalForm">СВЯЗАТЬСЯ</button>
 					<p>Есть еще вопросы? Свяжитесь с дежурным легионером из отдела связей с общественностью</p>
 				</div>
 			</div>
@@ -269,7 +440,7 @@
 			</nav>
 			<hr>
 
-			<div id="bottom" class="d-flex social-media justify-content-center ml-5">
+			<nav id="bottom" class="d-flex social-media justify-content-md-center justify-content-between ml-md-5">
 				<a href="#bottom">
 					<img src="img/instagram.svg" alt="">
 				</a>
@@ -294,7 +465,7 @@
 					<img src="img/youtube.svg" alt="">
 				</a>
 
-			</div>
+			</nav>
 		</div>
 
 	</footer>
@@ -303,11 +474,11 @@
 
 
 
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">Оставьте заявку, и наш фрументарий свяжется с вами!</h5>
+	        <h5 class="modal-title" id="">Оставьте заявку, и наш фрументарий свяжется с вами!</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 		        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<line y1="-0.5" x2="35.8237" y2="-0.5" transform="matrix(0.687931 0.725776 -0.604482 0.796619 1.29712 1)" stroke="black" stroke-opacity="0.5"/>
@@ -352,7 +523,7 @@
 	</div>
 	</div>
 
-	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
 	  <div class="modal-dialog modal-dialog-centered" role="document">
 	    <div class="modal-content">
     		<div class="modal-header">
@@ -373,18 +544,41 @@
 	  </div>
 	</div>
 
-	<button class="d-none trigger-form-send" data-toggle="modal" data-target="#exampleModal2"></button>
-	
+
+	<div class="modal fade" id="modalError" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+    		<div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<line y1="-0.5" x2="35.8237" y2="-0.5" transform="matrix(0.687931 0.725776 -0.604482 0.796619 1.29712 1)" stroke="black" stroke-opacity="0.5"/>
+						<line y1="-0.5" x2="35.4477" y2="-0.5" transform="matrix(-0.733476 0.679715 -0.554618 -0.832105 26 1)" stroke="black" stroke-opacity="0.5"/>
+					</svg>
+
+		        </button>
+	      	</div>
+
+	      <div class="modal-body">
+	        <p class="modal-error">Упс... Возможно, связисты НКР обрубили Ваше сетевое подключение! Попробуйте перезагрузить страницу!</p>
+	      </div>
+	   
+	    </div>
+	  </div>
+	</div>
+
+
 
 	
 
+	
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
+	<!-- удалить при релизе --><script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> <!-- удалить при релизе -->
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="main.js"></script>
+    <script src="mobile-menu.js"></script>
 </body>
 </html>

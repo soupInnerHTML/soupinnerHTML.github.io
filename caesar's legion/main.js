@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	console.time("script time");
+
 	$.fancybox.defaults.animationEffect = "fade";
 
 	$('[data-fancybox="gallery"]').fancybox({
@@ -36,17 +38,6 @@ $(document).ready(function() {
 
 	});
 
-	$('.modal-body .btn-join').click(function(event) {
-		event.preventDefault()
-		$('input').change();
-		let htm = $('.warning')
-		if(!htm.eq(0).html() && !htm.eq(1).html() && !htm.eq(2).html() && !htm.eq(3).html()) {
-			$('.close, .trigger-form-send').click();
-			$('.modal-form')[0].reset();
-			$('.check-from').attr('src', '')
-
-		}
-	});
 
 	const
 		base = name => $(`.modal-input[name="${name}"]`),
@@ -65,46 +56,79 @@ $(document).ready(function() {
 			state.parent().find($('.check-from')).attr('src', 'img/Group 325.svg')
 		},
 
-		checkingForSpaces = state => !state.val().length && setError('Это поле обязательно к заполнению!', state),
+		checkingForSpaces = state => !state.val().replace(/\s/g, '').length && setError('Это поле обязательно к заполнению!', state),
 
 		ezInputCheck = state => {
-			state.change(function() {
+			state.blur(function() {
 				checkingForSpaces(state);
-
-				/\w+/.test(state.val()) && setTrueCheck(state)
+				typeof checkingForSpaces(state) === 'boolean' && setTrueCheck(state)
 			})
 		}
 
-	inp.change(function() {
+	inp.blur(function() {
 
-		checkingForSpaces(inp);
+		/[a-zA-Zа-яА-Я]/g.test(inp.val()) && setTrueCheck(inp);
 
-		/[a-zA-Zа-яА-Я]/.test(inp.val()) && setTrueCheck(inp);
-
-		if( /\d/g.test(inp.val())  ) {
+		if( /[^a-zA-Zа-яА-Я\s]/g.test(inp.val())  ) {
 			setError('Введите свое настоящее имя. В нем должны быть только буквы.', inp)
 		};
+
+		checkingForSpaces(inp);
 
 	});
 
 	[inp2, inp3].forEach(el => ezInputCheck(el))
 
-	inp3.change(function() {
 
-		checkingForSpaces(inp3);
-
-		/\w+/.test(inp3.val()) && setTrueCheck(inp3)
+	inp4.blur(function() {
+		/мужской|женский/gi.test(inp4.val()) ? setTrueCheck(inp4) : setError('Введите существующий пол: мужской или женский', inp4)
+		checkingForSpaces(inp4);
 	})
 
-	inp4.change(function() {
-		if(inp4.val().toLowerCase() !== 'мужской' || inp4.val().toLowerCase() !== 'женский') {
-			setError('Введите существующий пол: мужской или женский', inp4)
+	$('.modal-body .btn-join').click(function(event) {
+		console.time("form time");
+
+		event.preventDefault()
+		$('input').blur();
+		let checkMark = 0;
+		[0, 1, 2, 3].forEach(i => {
+			if($('.check-from').eq(i).attr('src') === 'img/Group 325.svg') checkMark++
+		})
+		if(checkMark === 4) {
+			$.ajax({
+				url: 'https://oknavostok.com/wp-content/themes/vostok/ajax.php',
+				data: {
+				    inp      : inp.val(),
+				    inp2     : inp2.val(),
+				    inp3     : inp3.val(),
+				    inp4     : inp4.val(),
+				    caesar_mailing : true,
+				},
+				method  : 'GET',
+				cache   : false,
+				error    : ()   => {
+					$('#modalError').modal('show')
+				},
+				success : data => {
+					$('#modalSuccess').modal('show')
+					ObjectOfResponse = {
+						"Имя" : data.split('\n')[0],
+						"Родной населенный пункт" : data.split('\n')[1],
+						"Род деятельности" : data.split('\n')[2],
+						"Пол" : data.split('\n')[3],
+					}
+					console.table(ObjectOfResponse)
+					console.timeEnd("form time");
+				}
+			})
+
+			$('.close').click();
+			$('.modal-form')[0].reset();
+			$('.check-from').attr('src', '')
+
 		}
 
-		if(inp4.val().toLowerCase() == 'мужской' || inp4.val().toLowerCase() == 'женский') {
-			setTrueCheck(inp4)
-		}
-	})
+	});
 
 
 	$('.plus, .btn.btn-link').click(function() {
@@ -113,7 +137,7 @@ $(document).ready(function() {
 
   		let tgl = $(this).hasClass('plus') ? $(this) : $(this).parent().find($('.plus'))
 
-  		if( !tgl.parent().parent().parent().find( $('.collapse') ).hasClass('show') ) {
+  		if( !tgl.parentsUntil("#accordionMobile").find( $('.collapse') ).hasClass('show') ) {
   			tgl.html('-')
   		}
 
@@ -123,26 +147,35 @@ $(document).ready(function() {
     });
 
 
-	let x = $('svg line')
-    $('.close, .fancybox-close-small').hover(function() {
-    	x.attr({'stroke': '#7C0105', 'stroke-opacity': '1'})
-    }, function() {
-    	x.attr({'stroke': 'black', 'stroke-opacity': '.5'})
-    })
-
-    $('.fancybox-button').click(function() {
-    	console.log('1')
-    })
+	setInterval( () => {
+		let x = $('svg line')
+	    $('.close, .fancybox-close-small').hover(function() {
+	    	x.attr({'stroke': '#7C0105', 'stroke-opacity': '1'})
+	    }, function() {
+	    	x.attr({'stroke': 'black', 'stroke-opacity': '.5'})
+	    })
+	}, 1000)
 
     $('nav a').click(function() {
         $href = $(this).attr('href');
 
         $('html, body').animate({
             scrollTop: $($href).offset().top - 200
-        }, 500)
+        }, 1000)
 
         return false;
     });
+
+    $('.thumb').click(function() {
+    	$(this).siblings().removeClass('d-none')
+    	$(this).addClass('d-none')
+    })
+
+    $('.carousel-control-next, .carousel-control-prev').click(function() {
+    	$('.thumb').removeClass('d-none')
+    	$('.thumb').eq($('.carousel-item.active').index() + 1 > 3 ? 0 : 
+    		$('.carousel-item.active').index() + 1).addClass('d-none')
+    })
 
 	
 	function animate_number(obj) {
@@ -180,5 +213,20 @@ $(document).ready(function() {
 	for(let i = 0; i < 3; i++){
 		animate_number($(".numbers__big-num").eq(i))
 	}
-	
+
+	let similarReviews = () => {
+		if(window.innerWidth <= 575) {
+			$('.review-diff').removeClass('review-diff')
+		}
+
+		else {
+			$('.review').eq(1).addClass('review-diff')
+		}
+	}
+
+	similarReviews()
+
+	$( window ).resize(similarReviews)
+
+	console.timeEnd("script time");
 });
