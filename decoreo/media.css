@@ -1,0 +1,74 @@
+@media(max-width: 1538px){
+    .dots-left, .dots-right{
+        display: none;
+    }
+}
+@media(max-width: 1484px){
+    .gallery{
+
+    }
+    .gallery div{
+        margin-bottom: 50px;
+    }
+}
+@media(max-width: 1400px){
+    .telephone-number{
+        display: none !important;
+    }
+    .free-design{
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .free-design p, .free-design h1{
+        width: 100% !important;
+    }
+    .icon-telephone{
+        visibility: visible !important;
+        position: inherit !important;
+    }
+}
+@media(max-width: 1316px){
+    .woman, .yellow-box{
+        display: none;
+        position: absolute !important;
+    }
+    
+}
+@media(max-width: 1140px){
+    .navbar-nav:first-child{
+        margin: 0;
+    }
+}
+@media(max-width: 750px){
+    .nav-item:not(.last){
+        justify-content: flex-start !important;
+    }
+    .navbar-brand{
+        /* display: flex !important; */
+        justify-content: flex-end !important;
+    }
+}
+@media(max-width: 1336px){
+    .list-3 .decoreo, .beds, .last-block{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    .decoreo-discription{
+        padding-left: 0 !important;
+    }
+    .see-catalog-btn{
+        margin-left: -35px !important;
+    }
+    .see-catalog-btn button{
+        width: 370px;
+    }
+    .card-n-price{
+        margin-bottom: 50px;
+    }
+    .form-block, .catalog{
+        display: none;
+    }
+    .list-4 h1{
+        text-align: center;
+    }
+}
